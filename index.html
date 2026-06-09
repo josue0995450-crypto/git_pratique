@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADR — Amour à Donner et à Recevoir</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">ADR</div>
+      <div>
+        <h1>Amour à Donner et à Recevoir</h1>
+        <p>ONG apolitique — Kinshasa, RDC</p>
+      </div>
+    </div>
+    <nav>
+      <a href="#mission">Mission</a>
+      <a href="#activites">Activités</a>
+      <a href="#adhesion">Adhésion</a>
+      <button id="openLogin">Connexion</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="badge">Communiquer l'amour par des actes</span>
+        <h2>Une plateforme digitale pour gérer les membres, les projets et les actions sociales d’ADR.</h2>
+        <p>ADR œuvre pour l’amélioration du niveau de vie de la population, avec des actions dans l’environnement, le genre, l’éducation, la recherche, la santé et le social.</p>
+        <div class="hero-actions">
+          <a class="primary" href="#adhesion">Devenir membre</a>
+          <button class="secondary" id="openLogin2">Espace membre</button>
+        </div>
+      </div>
+      <div class="card impact-card">
+        <h3>Tableau d'impact</h3>
+        <div class="stats">
+          <div><strong>6</strong><span>Domaines</span></div>
+          <div><strong>4</strong><span>Organes</span></div>
+          <div><strong>∞</strong><span>Durée</span></div>
+        </div>
+        <p>Suivez les projets, cotisations, assemblées générales, documents et rapports.</p>
+      </div>
+    </section>
+
+    <section id="mission" class="grid two">
+      <article class="card">
+        <h2>Mission</h2>
+        <p>Communiquer le vrai amour non seulement par la parole, mais aussi par des actes d’amour sincères et vrais.</p>
+      </article>
+      <article class="card">
+        <h2>Vision</h2>
+        <p>Contribuer à une société où chaque composante satisfait ses besoins essentiels, améliore son bien-être et préserve les ressources pour les générations futures.</p>
+      </article>
+    </section>
+
+    <section id="activites">
+      <h2>Domaines d’activités</h2>
+      <div class="chips">
+        <span>Environnement</span><span>Genre</span><span>Éducation</span><span>Recherche</span><span>Santé</span><span>Social</span>
+      </div>
+    </section>
+
+    <section class="grid three">
+      <article class="card"><h3>Projets</h3><p>Créer, suivre et publier les programmes d’actions.</p></article>
+      <article class="card"><h3>Cotisations</h3><p>Suivi des droits d’adhésion et cotisations mensuelles/annuelles.</p></article>
+      <article class="card"><h3>Assemblée Générale</h3><p>Convocations, procès-verbaux, quorum et votes.</p></article>
+    </section>
+
+    <section id="adhesion" class="card adhesion">
+      <h2>Demande d’adhésion</h2>
+      <p>Le dossier peut inclure : formulaire d’adhésion, CV, deux photos passeport et validation par le Conseil d’Administration.</p>
+      <form id="joinForm">
+        <input required placeholder="Nom complet" />
+        <input required type="email" placeholder="Email" />
+        <input required placeholder="Téléphone" />
+        <select required>
+          <option value="">Catégorie souhaitée</option>
+          <option>Membre actif</option>
+          <option>Membre bienfaiteur</option>
+          <option>Membre sympathisant</option>
+          <option>Membre d’honneur</option>
+        </select>
+        <textarea placeholder="Motivation"></textarea>
+        <button type="submit" class="primary">Envoyer la demande</button>
+      </form>
+    </section>
+
+    <section id="dashboard" class="dashboard hidden">
+      <div class="dash-head">
+        <h2 id="dashTitle">Espace</h2>
+        <button id="logout">Déconnexion</button>
+      </div>
+      <div id="dashContent" class="grid three"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>ADR</strong> — Avenue Yongo N°54 bis, C/Kasa-vubu, Kinshasa/RDC</p>
+  </footer>
+
+  <dialog id="loginDialog">
+    <form method="dialog" class="login-box">
+      <button class="close">×</button>
+      <h2>Connexion ADR</h2>
+      <label>Rôle</label>
+      <select id="role">
+        <option value="member">Membre — droit standard</option>
+        <option value="admin">Administrateur — tous les droits</option>
+      </select>
+      <label>Méthode</label>
+      <div class="methods">
+        <button type="button" data-method="gmail" class="method active">Gmail</button>
+        <button type="button" data-method="phone" class="method">Téléphone</button>
+      </div>
+      <input id="identifier" placeholder="adresse@gmail.com" />
+      <button type="button" id="loginBtn" class="primary">Se connecter</button>
+      <small>Prototype : connecter Firebase/Auth0 pour une vraie authentification Gmail et téléphone OTP.</small>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
