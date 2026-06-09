@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Connexion à l'espace membre ou administrateur ADR." />
+  <title>Connexion - ADR</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Accueil ADR">
+      <span class="logo">ADR</span>
+      <span>
+        <strong>Amour à Donner et à Recevoir</strong>
+        <small>ONG apolitique - Kinshasa, RDC</small>
+      </span>
+    </a>
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="membership.html">Adhésion</a>
+      <a class="active" href="login.html">Connexion</a>
+      <a href="dashboard.html">Espace membre</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="auth-layout">
+      <div class="page-title">
+        <span class="eyebrow">Connexion sécurisée</span>
+        <h1>Accédez à votre espace ADR.</h1>
+        <p>Choisissez un rôle et une méthode de connexion. Cette version reste un prototype local prêt à être connecté à une vraie authentification.</p>
+      </div>
+
+      <form id="loginForm" class="panel form-panel login-form" novalidate>
+        <div class="field">
+          <label for="role">Rôle</label>
+          <select id="role">
+            <option value="member">Membre - droit standard</option>
+            <option value="admin">Administrateur - tous les droits</option>
+          </select>
+        </div>
+
+        <fieldset class="field">
+          <legend>Méthode</legend>
+          <div class="methods">
+            <button type="button" data-method="gmail" class="method active">Gmail</button>
+            <button type="button" data-method="phone" class="method">Téléphone</button>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="identifier">Identifiant</label>
+          <input id="identifier" placeholder="adresse@gmail.com" />
+        </div>
+
+        <button type="button" id="loginBtn" class="button primary">Se connecter</button>
+        <p class="form-note">Prototype : Firebase, Auth0 ou une API interne pourront gérer Gmail et OTP téléphone.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>ADR</strong> - Avenue Yongo N°54 bis, C/Kasa-Vubu, Kinshasa/RDC</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

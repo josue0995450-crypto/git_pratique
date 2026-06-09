@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Tableau de bord membre et administrateur de la plateforme ADR." />
+  <title>Espace membre - ADR</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Accueil ADR">
+      <span class="logo">ADR</span>
+      <span>
+        <strong>Amour à Donner et à Recevoir</strong>
+        <small>ONG apolitique - Kinshasa, RDC</small>
+      </span>
+    </a>
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="membership.html">Adhésion</a>
+      <a href="login.html">Connexion</a>
+      <a class="active" href="dashboard.html">Espace membre</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="dashboard" class="dashboard">
+      <div class="dashboard-head">
+        <div>
+          <span class="eyebrow">Plateforme ADR</span>
+          <h1 id="dashTitle">Espace membre</h1>
+          <p id="dashSubtitle">Vos informations et actions disponibles apparaissent ici.</p>
+        </div>
+        <button type="button" id="logout" class="button secondary">Déconnexion</button>
+      </div>
+
+      <div id="dashContent" class="section-grid three"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>ADR</strong> - Avenue Yongo N°54 bis, C/Kasa-Vubu, Kinshasa/RDC</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Formulaire de demande d'adhésion à l'ONG ADR." />
+  <title>Adhésion - ADR</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Accueil ADR">
+      <span class="logo">ADR</span>
+      <span>
+        <strong>Amour à Donner et à Recevoir</strong>
+        <small>ONG apolitique - Kinshasa, RDC</small>
+      </span>
+    </a>
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a class="active" href="membership.html">Adhésion</a>
+      <a href="login.html">Connexion</a>
+      <a href="dashboard.html">Espace membre</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <span class="eyebrow">Demande d'adhésion</span>
+      <h1>Présentez votre profil à l'administration ADR.</h1>
+      <p>Les informations envoyées servent à préparer la validation du dossier par le Conseil d'Administration.</p>
+    </section>
+
+    <section class="panel form-panel">
+      <form id="joinForm" novalidate>
+        <div class="field">
+          <label for="fullName">Nom complet</label>
+          <input id="fullName" required name="fullName" autocomplete="name" placeholder="Ex. Josué Kanku" />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" required type="email" name="email" autocomplete="email" placeholder="adresse@email.com" />
+        </div>
+        <div class="field">
+          <label for="phone">Téléphone</label>
+          <input id="phone" required name="phone" autocomplete="tel" placeholder="+243 000 000 000" />
+        </div>
+        <div class="field">
+          <label for="category">Catégorie souhaitée</label>
+          <select id="category" required name="category">
+            <option value="">Sélectionner une catégorie</option>
+            <option>Membre actif</option>
+            <option>Membre bienfaiteur</option>
+            <option>Membre sympathisant</option>
+            <option>Membre d'honneur</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="motivation">Motivation</label>
+          <textarea id="motivation" name="motivation" placeholder="Expliquez brièvement pourquoi vous souhaitez rejoindre ADR."></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="button primary">Envoyer la demande</button>
+          <p class="form-note">Un administrateur examinera le dossier avant validation.</p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>ADR</strong> - Avenue Yongo N°54 bis, C/Kasa-Vubu, Kinshasa/RDC</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

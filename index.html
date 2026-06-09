@@ -3,123 +3,132 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ADR — Amour à Donner et à Recevoir</title>
+  <meta name="description" content="Plateforme digitale de l'ONG ADR pour gérer les membres, les projets, les cotisations et les actions sociales." />
+  <title>ADR - Amour à Donner et à Recevoir</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="brand">
-      <div class="logo">ADR</div>
-      <div>
-        <h1>Amour à Donner et à Recevoir</h1>
-        <p>ONG apolitique — Kinshasa, RDC</p>
-      </div>
-    </div>
-    <nav>
-      <a href="#mission">Mission</a>
-      <a href="#activites">Activités</a>
-      <a href="#adhesion">Adhésion</a>
-      <button id="openLogin">Connexion</button>
+    <a class="brand" href="index.html" aria-label="Accueil ADR">
+      <span class="logo">ADR</span>
+      <span>
+        <strong>Amour à Donner et à Recevoir</strong>
+        <small>ONG apolitique - Kinshasa, RDC</small>
+      </span>
+    </a>
+    <nav aria-label="Navigation principale">
+      <a class="active" href="index.html">Accueil</a>
+      <a href="membership.html">Adhésion</a>
+      <a href="login.html">Connexion</a>
+      <a href="dashboard.html">Espace membre</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <div>
-        <span class="badge">Communiquer l'amour par des actes</span>
-        <h2>Une plateforme digitale pour gérer les membres, les projets et les actions sociales d’ADR.</h2>
-        <p>ADR œuvre pour l’amélioration du niveau de vie de la population, avec des actions dans l’environnement, le genre, l’éducation, la recherche, la santé et le social.</p>
+      <div class="hero-copy">
+        <span class="eyebrow">Communiquer l'amour par des actes</span>
+        <h1>Une plateforme claire pour piloter les membres, les projets et les actions sociales d'ADR.</h1>
+        <p>ADR accompagne les communautés à travers l'environnement, le genre, l'éducation, la recherche, la santé et l'action sociale.</p>
         <div class="hero-actions">
-          <a class="primary" href="#adhesion">Devenir membre</a>
-          <button class="secondary" id="openLogin2">Espace membre</button>
+          <a class="button primary" href="membership.html">Devenir membre</a>
+          <a class="button secondary" href="login.html">Accéder à mon espace</a>
         </div>
       </div>
-      <div class="card impact-card">
-        <h3>Tableau d'impact</h3>
+
+      <aside class="panel impact-panel" aria-label="Résumé d'impact">
+        <span class="panel-label">Tableau d'impact</span>
+        <h2>Suivi institutionnel</h2>
         <div class="stats">
           <div><strong>6</strong><span>Domaines</span></div>
           <div><strong>4</strong><span>Organes</span></div>
           <div><strong>∞</strong><span>Durée</span></div>
         </div>
-        <p>Suivez les projets, cotisations, assemblées générales, documents et rapports.</p>
-      </div>
+        <p>Projets, cotisations, assemblées, documents officiels et rapports sont centralisés dans un même espace.</p>
+      </aside>
     </section>
 
-    <section id="mission" class="grid two">
-      <article class="card">
-        <h2>Mission</h2>
-        <p>Communiquer le vrai amour non seulement par la parole, mais aussi par des actes d’amour sincères et vrais.</p>
+    <section class="section-grid two">
+      <article class="panel">
+        <span class="panel-label">Mission</span>
+        <h2>Servir avec constance</h2>
+        <p>Communiquer le vrai amour non seulement par la parole, mais aussi par des actes sincères, utiles et mesurables.</p>
       </article>
-      <article class="card">
-        <h2>Vision</h2>
-        <p>Contribuer à une société où chaque composante satisfait ses besoins essentiels, améliore son bien-être et préserve les ressources pour les générations futures.</p>
+      <article class="panel">
+        <span class="panel-label">Vision</span>
+        <h2>Élever le niveau de vie</h2>
+        <p>Contribuer à une société où chaque personne satisfait ses besoins essentiels, améliore son bien-être et préserve les ressources futures.</p>
       </article>
     </section>
 
-    <section id="activites">
-      <h2>Domaines d’activités</h2>
-      <div class="chips">
-        <span>Environnement</span><span>Genre</span><span>Éducation</span><span>Recherche</span><span>Santé</span><span>Social</span>
+    <section class="section-block">
+      <div class="section-heading">
+        <span class="panel-label">Domaines d'activités</span>
+        <h2>Des actions structurées autour des besoins prioritaires</h2>
+      </div>
+      <div class="chips" aria-label="Domaines ADR">
+        <span>Environnement</span>
+        <span>Genre</span>
+        <span>Éducation</span>
+        <span>Recherche</span>
+        <span>Santé</span>
+        <span>Social</span>
       </div>
     </section>
 
-    <section class="grid three">
-      <article class="card"><h3>Projets</h3><p>Créer, suivre et publier les programmes d’actions.</p></article>
-      <article class="card"><h3>Cotisations</h3><p>Suivi des droits d’adhésion et cotisations mensuelles/annuelles.</p></article>
-      <article class="card"><h3>Assemblée Générale</h3><p>Convocations, procès-verbaux, quorum et votes.</p></article>
+    <section class="section-grid three">
+      <article class="panel feature">
+        <span>01</span>
+        <h3>Projets</h3>
+        <p>Créer, suivre et publier les programmes d'actions avec une lecture claire des priorités.</p>
+      </article>
+      <article class="panel feature">
+        <span>02</span>
+        <h3>Cotisations</h3>
+        <p>Suivre les droits d'adhésion, cotisations mensuelles ou annuelles et reçus des membres.</p>
+      </article>
+      <article class="panel feature">
+        <span>03</span>
+        <h3>Assemblées générales</h3>
+        <p>Organiser les convocations, procès-verbaux, présences, quorum et décisions.</p>
+      </article>
     </section>
 
-    <section id="adhesion" class="card adhesion">
-      <h2>Demande d’adhésion</h2>
-      <p>Le dossier peut inclure : formulaire d’adhésion, CV, deux photos passeport et validation par le Conseil d’Administration.</p>
-      <form id="joinForm">
-        <input required placeholder="Nom complet" />
-        <input required type="email" placeholder="Email" />
-        <input required placeholder="Téléphone" />
-        <select required>
-          <option value="">Catégorie souhaitée</option>
-          <option>Membre actif</option>
-          <option>Membre bienfaiteur</option>
-          <option>Membre sympathisant</option>
-          <option>Membre d’honneur</option>
-        </select>
-        <textarea placeholder="Motivation"></textarea>
-        <button type="submit" class="primary">Envoyer la demande</button>
-      </form>
+    <section class="section-grid two">
+      <article class="panel">
+        <span class="panel-label">Gouvernance</span>
+        <h2>Des organes clairs pour une gestion responsable</h2>
+        <ul class="clean-list">
+          <li>Assemblée Générale pour les grandes orientations.</li>
+          <li>Conseil d'Administration pour la validation et le contrôle.</li>
+          <li>Direction Exécutive pour la coordination quotidienne.</li>
+          <li>Commissariat aux comptes pour le suivi financier.</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <span class="panel-label">Processus</span>
+        <h2>Un parcours d'adhésion traçable</h2>
+        <ol class="timeline">
+          <li><strong>Dépôt</strong><span>Le candidat remplit le formulaire.</span></li>
+          <li><strong>Analyse</strong><span>L'administration examine les informations.</span></li>
+          <li><strong>Décision</strong><span>Le dossier est validé ou refusé dans l'espace admin.</span></li>
+        </ol>
+      </article>
     </section>
 
-    <section id="dashboard" class="dashboard hidden">
-      <div class="dash-head">
-        <h2 id="dashTitle">Espace</h2>
-        <button id="logout">Déconnexion</button>
+    <section class="cta-band">
+      <div>
+        <span class="panel-label">Adhésion</span>
+        <h2>Rejoindre ADR et contribuer aux actions sociales</h2>
+        <p>Le dossier peut inclure le formulaire d'adhésion, un CV, deux photos passeport et la validation par le Conseil d'Administration.</p>
       </div>
-      <div id="dashContent" class="grid three"></div>
+      <a class="button primary" href="membership.html">Remplir le formulaire</a>
     </section>
   </main>
 
   <footer>
-    <p><strong>ADR</strong> — Avenue Yongo N°54 bis, C/Kasa-vubu, Kinshasa/RDC</p>
+    <p><strong>ADR</strong> - Avenue Yongo N°54 bis, C/Kasa-Vubu, Kinshasa/RDC</p>
   </footer>
-
-  <dialog id="loginDialog">
-    <form method="dialog" class="login-box">
-      <button class="close">×</button>
-      <h2>Connexion ADR</h2>
-      <label>Rôle</label>
-      <select id="role">
-        <option value="member">Membre — droit standard</option>
-        <option value="admin">Administrateur — tous les droits</option>
-      </select>
-      <label>Méthode</label>
-      <div class="methods">
-        <button type="button" data-method="gmail" class="method active">Gmail</button>
-        <button type="button" data-method="phone" class="method">Téléphone</button>
-      </div>
-      <input id="identifier" placeholder="adresse@gmail.com" />
-      <button type="button" id="loginBtn" class="primary">Se connecter</button>
-      <small>Prototype : connecter Firebase/Auth0 pour une vraie authentification Gmail et téléphone OTP.</small>
-    </form>
-  </dialog>
 
   <script src="app.js"></script>
 </body>
